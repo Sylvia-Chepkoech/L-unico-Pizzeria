@@ -1,0 +1,16 @@
+#about {
+  color: black;
+  
+}
+
+#image {
+  padding: 20px;
+  margin: 0;
+}
+.section-header {
+  text-align: center;
+  padding: 20px;
+}
+#about {
+  background-color: antiquewhite;
+}
