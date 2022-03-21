@@ -212,40 +212,34 @@ rel="stylesheet"
    </div>
  </section>
   <!--form-->
-  <!-- <section class="order" id="orders"> -->
   <div class="container">
     <div class="row">
-      <div class="main col-md-5 offset-7">
+      <div class="main col-md-5 offset-4">
         <div class="content-one">
           <h2>Perfect slice, Perfect Prize</h2>
           <input type="button" value="ORDER NOW!" class="button" id="order-now">         
         </div>
-      <!-- </div>
-    </div> -->
+     
     <div class="content-two">
-      <!-- <div class="col-md-5" id="yourorder">
-        <div class="pizza" id="pizzas"> -->
-          <form id="form1" class="form" name="form1" action="">
-            <!-- <div class="form-group"> -->
-            <legend>Build Your Own Pizza:)</legend>
-              <label for="flavor">Select your flavor;)</label>
+     <form id="form1" class="form" name="form1" action="">
+      <legend>Make Your Order:)</legend>
+       
+        <label for="flavor">Select your flavor;)</label>
               <select name="flavor" id="flavor" required>
                 <option disabled selected>Pizza flavor</option>
                 <option value="margherita">Margherita Pizza</option>
                 <option value="pesto">Pesto Pizza</option>
                 <option value="works">The Works</option>
               </select>
-            <!-- </div>
-            <div class="form-group"> -->
+            
               <label for="size">Select your size;)</label>
               <select name="size" id="size">
                 <option disabled selected>Pizza size</option>
-                <option value="margherita">Large(Ksh.1200)</option>
-                <option value="pesto">Medium(Ksh.900)</option>
-                <option value="works">Small(Ksh.600)</option>
+                <option value="large">Large(Ksh.1200)</option>
+                <option value="medium">Medium(Ksh.900)</option>
+                <option value="small">Small(Ksh.600)</option>
               </select>
-            <!-- </div>
-            <div class="form-group"> -->
+            
               <label for="crust">Select your crust;)</label>
               <select name="crust" id="crust">
                 <option disabled selected>Pizza crust</option>
@@ -253,23 +247,34 @@ rel="stylesheet"
                 <option value="stuffed">Stuffed(Ksh.200)</option>
                 <option value="gluten">Gluten-free(Ksh.150)</option>
               </select>
-            <!-- </div>
-            <div class="form-group"> -->
+            
               <label for="toppings">Select your extra toppings;)</label>
-              <select name="toppings" id="toppings">
-                <option disabled selected>Pizza extra topping</option>
-                <option value="cheese">Cheese</option>
-                <option value="bacon">Bacon</option>
-                <option value="chicken">Chicken</option>
-                <option value="mushroom">Mushroom</option>
-                <option value="peppers">Peppers</option>
-              </select>
-            <!-- </div>
-            <div class="form-group"> -->
-              <label for="number">Enter the number of orders:)</label>
-              <input type="number" id="num" class="form-control" placeholder="The number of pizzas you'd like">              
-            <!-- </div> -->
-            <button type="button" id="submit" >Continue</button>
+              <br>
+              <p>Large ->ksh.150, Medium ->ksh.100, Small ->ksh.50</p>
+              <div class="checkbox">
+                <input type="checkbox" value="cheese" name="toppings" id="cheese">
+                <label for="cheese">Cheese</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" value="bacon" name="toppings" id="bacon">
+                <label for="bacon">Bacon</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" value="chicken" name="toppings" id="chicken">
+                <label for="chicken">Chicken</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" value="mushroom" name="toppings" id="mushroom">
+                <label for="mushroom">Mushroom</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" value="peppers" name="toppings" id="peppers">
+                <label for="peppers">Peppers</label>
+              </div>
+              <br>
+              
+            <input type="submit" id="submit" value="CONTINUE" class="button">
+            <div class="output"></div>
           </form>
         </div>
         <div class="content-three">
@@ -281,7 +286,6 @@ rel="stylesheet"
                 <th><strong>SIZE</strong></th>
                 <th><strong>CRUST</strong></th>
                 <th><strong>TOPPINGS</strong></th>
-                <th><strong>QTY</strong></th>
                 <th><strong>TOTAL</strong></th>
               </tr>
             </thead>
@@ -291,16 +295,17 @@ rel="stylesheet"
                 <td id="size"></td>
                 <td id="crust"></td>
                 <td id="toppings"></td>
-                <td id="qty"></td>
                 <td id="total"></td>
               </tr>
             </tbody>
           </table>
           <div class="table-buttons">
             <input type="button" value="HOME DELIVERY" class="button" id="delivery">
-            <span class="button" id="pick-up">PICK-UP</span>
+            <span class="button" id="pick-up">PICK-UP</span><br>
+            <input type="submit" value="ADD PIZZA" class="button" id="add">
           </div>
         </div>
+
         <div class="content-four">
           <form id="form2" class="form" name="form2">
             <legend>Delivery fees @ Ksh. 400</legend>
@@ -320,7 +325,6 @@ rel="stylesheet"
       </div>
     </div>
   </div>
-  </section>
   <!--footer-->
   <footer class="bg-light text-center text-white">
     <!-- Grid container -->

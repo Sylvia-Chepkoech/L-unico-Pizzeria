@@ -6,7 +6,7 @@ function Pizza(flavor, size, crust, toppings){
   this.toppings = toppings;
 }
 
-var priceSize, priceCrust, priceTopping
+var priceSize, priceCrust, priceTopping;
 
 //calculate pizza price
 var price = function(pizzaSize, pizzaCrust, pizzaTopping){
@@ -38,21 +38,37 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping){
     case "stuffed":
         pizzaCrust = 200;
         break;
-    case "glutten":
+    case "gluten":
         pizzaCrust = 150;
         break;
     default:
         location.reload();
         alert("Select the pizza crust you want");   
   };
-
-  if (pizzaSize == 'large') {
-      priceTopping =pizzaTopping.length * 150;
-  } else if (pizzaSize = 'medium') {
-      priceTopping =pizzaTopping.length * 200;    
-  } else if (pizzaSize = 'small'){
-    priceTopping =pizzaTopping.length * 50;
-  }
+  switch (pizzaTopping) {
+    case "":
+      pizzaTopping = 0;
+      break;
+    case "cheese":
+      pizzaTopping = 100;
+      break;
+    case "bacon":
+        pizzaTopping = 100;
+        break;
+    case "chicken":
+        pizzaTopping = 100;
+        break;
+    case "mushroom":
+        pizzaTopping = 100;
+        break;
+    case "peppers":
+        pizzaTopping = 100;
+        break;
+    default:
+        location.reload();
+        // alert("Select the pizza topping you want");   
+  };
+ 
 
   var pizzaTotal = priceSize + priceCrust + priceTopping;
   return pizzaTotal;
@@ -72,14 +88,14 @@ $(document).ready(function(){
     $(".content-two").hide();
     //get form values
 
-    let pizzaName = $("#flavor option:selected").val();
+    let pizzaFlavor = $("#flavor option:selected").val();
     let pizzaSize = $("#size option:selected").val();
     let pizzaCrust = $("#crust option:selected").val();
     let pizzaTopping = $("#toppings option:selected").val();
   });
 
   var total = price(pizzaSize, pizzaCrust, pizzaTopping);
-  var grandTotal =total + 400;
+  var grandTotal = total + 400;
   var order = new Pizza(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
   $(".current-order").append('<tr><td id="name">' + order.pizza + '</td><td id="size">' + order.size + '</td><td id="crust">' + order.crust + '</td><td id="toppings">' + '</td><td id="total">' + total);
 
@@ -107,7 +123,7 @@ $("#checkout").click(function() {
 })
 
 //delivery button 
-4("#delivery").click(function() {
+$("#delivery").click(function() {
   $(".table-buttons").hide();
   $(".content-four").slideDown();
 })

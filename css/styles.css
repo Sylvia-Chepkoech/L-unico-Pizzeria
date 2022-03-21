@@ -27,7 +27,9 @@
 
 .card-group {
   font-family: fantasy;
-  font-size: 16px;
+  font-size: 16px;  
+}
 
-  
+.content-two, .content-three, .content-four {
+  display: none;
 }
