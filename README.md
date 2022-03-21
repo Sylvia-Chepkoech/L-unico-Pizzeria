@@ -17,6 +17,8 @@ None
 * CSS
 * JavaScript/jQuery
 * Bootstrap
+## Live link
+https://sylvia-chepkoech.github.io/L-unico-Pizzeria/
 ## Support and contact details
 Should you be unable to access the website, have any recommendations and/or questions, feel free to email me:sylvia.chepkoech@student.moringaschool.com
 
