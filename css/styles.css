@@ -2,7 +2,25 @@
   color: black;
   
 }
-
+.carousel-item h1 {
+  font-size: 100px;
+  text-align: left;
+  padding-bottom: 400px;
+  font-family: fantasy;
+  color: blanchedalmond;
+  
+}
+.carousel-item h1:hover {
+  color: burlywood;
+}
+.carousel-item p {
+  font-size: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+} 
+.carousel-item p:hover {
+  color: white;
+}
 #image {
   padding: 20px;
   margin: 0;
@@ -11,6 +29,8 @@
   text-align: center;
   padding: 20px;
   color: black;
+  font-size: 35px;
+
 }
 #about, #menu {
   background-color: antiquewhite;

@@ -57,7 +57,7 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping){
 
   var pizzaTotal = priceSize + priceCrust + priceTopping;
   return pizzaTotal;
-  console.log();
+  
 }
 
 //user interface logic 
