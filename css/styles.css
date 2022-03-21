@@ -31,22 +31,24 @@
 }
 .place-order {
   background-color: antiquewhite;
-  background-image: url(../images/form.jpeg);
+  /* background-image: url(../images/form.jpeg); */
   background-repeat: no-repeat;
   background-position: center;
   height: 70vh;
   width: 100vw;
+  
   /* padding-top: 10px; */
 }
 
 .main h2 {
-  color: white;
-  padding-top: 150px;
+  color: black;
+  padding-top: 100px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 50px;  
+  font-size: 70px;  
+  
 }
 .button {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
   border: none;
   color: black;
   padding: 15px 32px;
@@ -58,6 +60,46 @@
   display: inline-block;
   font-size: 15px;
 }
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
 .content-two, .content-three, .content-four {
   display: none;
+
+}
+input[type=checkbox],
+input[type=text],
+input[type=tel],
+input[type=number],
+select {
+  width:100%;
+  padding: 8px 12px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.checkbox {
+  display: inline-block;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+.form {
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(147, 240, 227, 0.5);
+}
+.table-buttons {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.confirm-order {
+  border: 3px solid black;
+  border-radius: 15px;
+  background-color: rgba(236, 161, 203, 0.5);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }

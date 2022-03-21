@@ -30,7 +30,7 @@ rel="stylesheet"
       <div class="col-md-12">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color:antiquewhite;">
           <div class="container-fluid">
-            <a class="navbar-brand" id="text" href="#">L'unico <span class="brand">Pizzeria</span></a>
+            <a class="navbar-brand" id="text" href="#">L'unico Pizzeria</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -44,11 +44,11 @@ rel="stylesheet"
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">About us</a>
-                <a class="nav-link active" href="#">Menu</a>
-                <a class="nav-link active" href="#">B.Y.O.P</a>
+                <a class="nav-link active" aria-current="page" href="#about">About us</a>
+                <a class="nav-link active" href="#menu">Menu</a>
+                <a class="nav-link active" href="#place-order">Place Order</a>
                 <a class="nav-link active"
-                  >Contact Us</a
+                  >Contact Us(0734757232)</a
                 >
               </div>
             </div>
@@ -75,16 +75,16 @@ rel="stylesheet"
         data-mdb-slide-to="1"
         aria-label="Slide 2"
       ></button>
-      <button
+      <!-- <button
         type="button"
         data-mdb-target="#carouselExampleCaptions"
         data-mdb-slide-to="2"
         aria-label="Slide 3"
-      ></button>
+      ></button> -->
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://media.istockphoto.com/photos/supreme-pizza-picture-id1302565865?b=1&k=20&m=1302565865&s=170667a&w=0&h=F4-Dd2X-_jaEwYWMv-eo35Viqbat6sqe1g1TEEV53Aw=" class="d-block w-100" alt="Wild Landscape"/>
+        <img src="https://media.istockphoto.com/photos/supreme-pizza-picture-id1302565865?b=1&k=20&m=1302565865&s=170667a&w=0&h=F4-Dd2X-_jaEwYWMv-eo35Viqbat6sqe1g1TEEV53Aw=" class="d-block w-100" alt=""/>
         <div class="carousel-caption d-none d-md-block">
           <h1>L'unico Pizzeria</h1>
           <p>One of a kind</p>
@@ -97,12 +97,12 @@ rel="stylesheet"
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <img src="https://media.istockphoto.com/photos/hands-of-young-people-taking-pizza-slices-picture-id1072052430?b=1&k=20&m=1072052430&s=170667a&w=0&h=2Olf0ltkP6KE0peyxq09TANbyMWmcnxv3-k5U3rvu-0=" class="d-block w-100" alt="Exotic Fruits"/>
         <div class="carousel-caption d-none d-md-block">
          
           <p>Get your pizza delivered and enjoy it with your loved ones at the comfort of your home</p>
-        </div>
+        </div> -->
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">
@@ -212,11 +212,11 @@ rel="stylesheet"
    </div>
  </section>
   <!--form-->
-  <section class="place-order">
+  <section class="place-order" >
   <div class="container">
     <div class="row">
       <div class="main col-md-5 offset-4">
-        <div class="content-one">
+        <div class="content-one" id="place-order">
           <h2>Perfect Slice, Perfect Prize</h2>
           <input type="button" value="ORDER NOW!" class="button" id="order-now">         
         </div>
@@ -225,8 +225,8 @@ rel="stylesheet"
      <form id="form1" class="form" name="form1" action="">
       <legend>Make Your Order:)</legend>
        
-        <label for="flavor">Select your flavor;)</label>
-              <select name="flavor" id="flavor" required>
+        <label for="name">Select your flavor;)</label>
+              <select name="name" id="name" required>
                 <option disabled selected>Pizza flavor</option>
                 <option value="margherita">Margherita Pizza</option>
                 <option value="pesto">Pesto Pizza</option>
@@ -283,7 +283,7 @@ rel="stylesheet"
           <table class="confirm-order">
             <thead>
               <tr>
-                <th><strong>FLAVOR</strong></th>
+                <th><strong>NAME</strong></th>
                 <th><strong>SIZE</strong></th>
                 <th><strong>CRUST</strong></th>
                 <th><strong>TOPPINGS</strong></th>
@@ -292,7 +292,7 @@ rel="stylesheet"
             </thead>
             <tbody class="current-order">
               <tr>
-                <td id="flavor"></td>
+                <td id="name"></td>
                 <td id="size"></td>
                 <td id="crust"></td>
                 <td id="toppings"></td>
@@ -302,7 +302,7 @@ rel="stylesheet"
           </table>
           <div class="table-buttons">
             <input type="button" value="HOME DELIVERY" class="button" id="delivery">
-            <span class="button" id="pick-up">PICK-UP</span><br>
+            <input type ="button" value="PICK-UP" class="button" id="pick-up"><br>
             <input type="submit" value="ADD PIZZA" class="button" id="add">
           </div>
         </div>

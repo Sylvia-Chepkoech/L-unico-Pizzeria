@@ -1,6 +1,6 @@
 //business user interface
-function Pizza(flavor, size, crust, toppings){
-  this.flavor = flavor;
+function Pizza(name, size, crust, toppings){
+  this.name = name;
   this.size = size;
   this.crust = crust;
   this.toppings = toppings;
@@ -57,6 +57,7 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping){
 
   var pizzaTotal = priceSize + priceCrust + priceTopping;
   return pizzaTotal;
+  console.log();
 }
 
 //user interface logic 
@@ -73,7 +74,7 @@ $(document).ready(function(){
     $(".content-two").hide();
     //get form values
 
-    let pizzaFlavor = $("#flavor option:selected").val();
+    let pizzaName = $("#name option:selected").val();
     let pizzaSize = $("#size option:selected").val();
     let pizzaCrust = $("#crust option:selected").val();
     let pizzaTopping = [];
@@ -83,9 +84,9 @@ $(document).ready(function(){
   });
 
   var total = price(pizzaSize, pizzaCrust, pizzaTopping);
-  var grandTotal = total + 400;
+  var grandTotal = parseInt(total + 400);
   var order = new Pizza(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
-  $(".current-order").append('<tr><td id="name">' + order.pizza + '</td><td id="size">' + order.size + '</td><td id="crust">' + order.crust + '</td><td id="toppings">' + order.toppings + '</td><td id="total">' + total);
+  $(".current-order").append('<tr><td id="name">' + order.name + '</td><td id="size">' + order.size + '</td><td id="crust">' + order.crust + '</td><td id="toppings">' + order.toppings + '</td><td id="total">' + total);
 
 //pickup button
 $("#pick-up").click(function(){
@@ -105,7 +106,7 @@ $("#checkout").click(function() {
   if(clientName === "" || clientNumber === "" || clientLocation === "") {
     alert("Please fill in the delivery form. ALl fields are required")
   }else {
-    alert("Dear " + clientName + "your order will be delivered to " + clientLocation + "within the next hour. Your total is: " + grandTotal + "You will be called upon arrival of your pizza!");
+    alert("Dear  " + clientName + " your order will be delivered to  " + clientLocation + " within the next hour. Your total is: " + grandTotal + "You will be called upon arrival of your pizza!");
   }
 })
 })
@@ -122,7 +123,8 @@ $("#add").click(function(event) {
 })
 //delivery button 
 $("#delivery").click(function() {
-  $(".table-buttons").hide();
-  $(".content-four").slideDown();
+  $(".content-three").hide();
+  $(".table-buttons").show();
+  $(".content-four").show();
 })
 })
