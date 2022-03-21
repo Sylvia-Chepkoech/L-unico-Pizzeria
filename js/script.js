@@ -87,7 +87,27 @@ $(document).ready(function(){
 $("#pick-up").click(function(){
   alert("Dear customer, your order will be ready in one hour for pickup. Your total order is:" + total);
 
-  //refresh page
+//refresh page
   location.reload();
-}
+})
+
+//checkout button
+$("#checkout").click(function() {
+  //form data
+  var clientName = $("#full-name").val();
+  var clientNumber = $("#phone-number").val();
+  var clientLocation = $("#location").val();
+
+  if(clientName === "" || clientNumber === "" || clientLocation === "") {
+    alert("Please fill in the delivery form. ALl fields are required")
+  }else {
+    alert("Dear " + clientName + "your order will be delivered to " + clientLocation + "within the next hour. Your total is: " + grandTotal + "You will be called upon arrival of your pizza!");
+  }
+})
+})
+
+//delivery button 
+4("#delivery").click(function() {
+  $(".table-buttons").hide();
+  $(".content-four").slideDown();
 })
