@@ -212,60 +212,109 @@ rel="stylesheet"
    </div>
  </section>
   <!--form-->
-  <section class="order" id="orders">
+  <!-- <section class="order" id="orders"> -->
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div class="section-header">
-          <h2>B.Y.O.P</h2>
-          <h6>Build Your Own Pizza</h6>
+      <div class="main col-md-5 offset-7">
+        <div class="content-one">
+          <h2>Perfect slice, Perfect Prize</h2>
+          <input type="button" value="ORDER NOW!" class="button" id="order-now">         
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-5" id="yourorder">
-        <div class="pizza" id="pizzas">
-          <form>
-            <div class="form-group">
-              <label for="select1">Select your flavor;)</label>
-              <select name="form-control" id="flavors">
+      <!-- </div>
+    </div> -->
+    <div class="content-two">
+      <!-- <div class="col-md-5" id="yourorder">
+        <div class="pizza" id="pizzas"> -->
+          <form id="form1" class="form" name="form1" action="">
+            <!-- <div class="form-group"> -->
+            <legend>Build Your Own Pizza:)</legend>
+              <label for="flavor">Select your flavor;)</label>
+              <select name="flavor" id="flavor" required>
+                <option disabled selected>Pizza flavor</option>
                 <option value="margherita">Margherita Pizza</option>
                 <option value="pesto">Pesto Pizza</option>
                 <option value="works">The Works</option>
               </select>
-            </div>
-            <div class="form-group">
-              <label for="select2">Select your size;)</label>
-              <select name="form-control" id="size">
+            <!-- </div>
+            <div class="form-group"> -->
+              <label for="size">Select your size;)</label>
+              <select name="size" id="size">
+                <option disabled selected>Pizza size</option>
                 <option value="margherita">Large(Ksh.1200)</option>
                 <option value="pesto">Medium(Ksh.900)</option>
                 <option value="works">Small(Ksh.600)</option>
               </select>
-            </div>
-            <div class="form-group">
-              <label for="select3">Select your crust;)</label>
-              <select name="form-control" id="crust
-                <option value="crispy">Crispy</option>
-                <option value="stuffed">Stuffed</option>
-                <option value="gluten">Gluten-free</option>
+            <!-- </div>
+            <div class="form-group"> -->
+              <label for="crust">Select your crust;)</label>
+              <select name="crust" id="crust">
+                <option disabled selected>Pizza crust</option>
+                <option value="crispy">Crispy(Ksh.100)</option>
+                <option value="stuffed">Stuffed(Ksh.200)</option>
+                <option value="gluten">Gluten-free(Ksh.150)</option>
               </select>
-            </div>
-            <div class="form-group">
-              <label for="select4">Select your extra toppings;)</label>
-              <select name="form-control" id="toppings">
+            <!-- </div>
+            <div class="form-group"> -->
+              <label for="toppings">Select your extra toppings;)</label>
+              <select name="toppings" id="toppings">
+                <option disabled selected>Pizza extra topping</option>
                 <option value="cheese">Cheese</option>
                 <option value="bacon">Bacon</option>
                 <option value="chicken">Chicken</option>
                 <option value="mushroom">Mushroom</option>
                 <option value="peppers">Peppers</option>
               </select>
-            </div>
-            <div class="form-group">
-              <label for="select5">Enter the number of orders:)</label>
+            <!-- </div>
+            <div class="form-group"> -->
+              <label for="number">Enter the number of orders:)</label>
               <input type="number" id="num" class="form-control" placeholder="The number of pizzas you'd like">              
-            </div>
+            <!-- </div> -->
             <button type="button" id="submit" >Continue</button>
-
+          </form>
+        </div>
+        <div class="content-three">
+          <h2>Confirm your order:</h2>
+          <table class="confirm-order">
+            <thead>
+              <tr>
+                <th><strong>FLAVOR</strong></th>
+                <th><strong>SIZE</strong></th>
+                <th><strong>CRUST</strong></th>
+                <th><strong>TOPPINGS</strong></th>
+                <th><strong>QTY</strong></th>
+                <th><strong>TOTAL</strong></th>
+              </tr>
+            </thead>
+            <tbody class="current-order">
+              <tr>
+                <td id="flavor"></td>
+                <td id="size"></td>
+                <td id="crust"></td>
+                <td id="toppings"></td>
+                <td id="qty"></td>
+                <td id="total"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table-buttons">
+            <input type="button" value="HOME DELIVERY" class="button" id="delivery">
+            <span class="button" id="pick-up">PICK-UP</span>
+          </div>
+        </div>
+        <div class="content-four">
+          <form id="form2" class="form" name="form2">
+            <legend>Delivery fees @ Ksh. 400</legend>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Your Full Name">
+            <div class="info">
+              <label for="telephone">Phone Number</label>
+              <input type="tel" id="phone-number" placeholder="Phone Number">
+            </div>
+            <div class="info">
+              <label for="address">Location</label>
+              <input type="text" id="location" placeholder="Your Location">
+            </div>
+            <input type="submit" value="CHECKOUT" class="button" id="checkout">
           </form>
         </div>
       </div>
