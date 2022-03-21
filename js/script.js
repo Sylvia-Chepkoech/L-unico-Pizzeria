@@ -64,5 +64,30 @@ $(document).ready(function(){
     $(".content-two").show();
     $(".content-one").hide();
   })
-  
+
+//continue button
+  $("#submit").click(function(event){
+    event.preventDefault();
+    $(".content-three").show();
+    $(".content-two").hide();
+    //get form values
+
+    let pizzaName = $("#flavor option:selected").val();
+    let pizzaSize = $("#size option:selected").val();
+    let pizzaCrust = $("#crust option:selected").val();
+    let pizzaTopping = $("#toppings option:selected").val();
+  });
+
+  var total = price(pizzaSize, pizzaCrust, pizzaTopping);
+  var grandTotal =total + 400;
+  var order = new Pizza(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
+  $(".current-order").append('<tr><td id="name">' + order.pizza + '</td><td id="size">' + order.size + '</td><td id="crust">' + order.crust + '</td><td id="toppings">' + '</td><td id="total">' + total);
+
+//pickup button
+$("#pick-up").click(function(){
+  alert("Dear customer, your order will be ready in one hour for pickup. Your total order is:" + total);
+
+  //refresh page
+  location.reload();
+}
 })
