@@ -30,16 +30,16 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping){
 
   switch (pizzaCrust) {
     case "":
-      pizzaCrust = 0;
+      priceCrust = 0;
       break;
     case "crispy":
-      pizzaCrust = 100;
+      priceCrust = 100;
       break;
     case "stuffed":
-        pizzaCrust = 200;
+        priceCrust = 200;
         break;
     case "gluten":
-        pizzaCrust = 150;
+        priceCrust = 150;
         break;
     default:
         location.reload();
